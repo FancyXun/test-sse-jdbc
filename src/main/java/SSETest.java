@@ -1,7 +1,7 @@
-import com.mysql.cj.sse.Connection;
-import com.mysql.cj.sse.DriverManager;
-import com.mysql.cj.sse.ResultSet;
-import com.mysql.cj.sse.Statement;
+import com.eulerdb.cj.sse.Connection;
+import com.eulerdb.cj.sse.DriverManager;
+import com.eulerdb.cj.sse.ResultSet;
+import com.eulerdb.cj.sse.Statement;
 
 import java.sql.SQLException;
 
@@ -15,7 +15,7 @@ public class SSETest {
         try {
             //注册连接(可以写到一行里面)
             //com.mysql.cj.jdbc.Driver Driver = new com.mysql.cj.jdbc.Driver();
-            DriverManager.registerDriver(new com.mysql.cj.sse.Driver());
+            DriverManager.registerDriver(new com.eulerdb.cj.sse.Driver());
             //获取数据库连接
             conn=DriverManager.getConnection("jdbc:mysql://127.0.0.1:8888/points?serverTimezone=GMT%2B8","root","root");
             //获取数据库操作对象
